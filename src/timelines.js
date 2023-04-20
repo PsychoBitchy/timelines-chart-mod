@@ -906,11 +906,12 @@ export default Kapsule({
       //
 
       function reduceLabel(label, maxChars) {
-        return label.length<=maxChars?label:(
-          label.substring(0, maxChars*2/3)
-          + '...'
-          + label.substring(label.length - maxChars/3, label.length
-        ));
+        return label;
+        // return label.length<=maxChars?label:(
+        //   label.substring(0, maxChars*2/3)
+        //   + '...'
+        //   + label.substring(label.length - maxChars/3, label.length
+        // ));
       }
     }
 
