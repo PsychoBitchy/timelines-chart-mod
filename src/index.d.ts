@@ -137,7 +137,7 @@ export interface TimelinesChartGenericInstance<ChainableInstance> {
   rectRvalue(rx: number): ChainableInstance;
   
   hoverEnlargeRatio(): number;
-  hoverEnlargeRatio(zoom: number): ChainableInstance;
+  hoverEnlargeRatio(mult: number): ChainableInstance;
 }
 
 export type TimelinesChartInstance = TimelinesChartGenericInstance<TimelinesChartInstance>;

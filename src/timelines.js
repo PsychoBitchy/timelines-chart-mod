@@ -98,7 +98,7 @@ export default Kapsule({
     maxLineHeight: { default: 12 },
     leftMargin: { default: 90 },
     rectRvalue: { default: 1},
-    hoverEnlargeRatio: {default: .4},
+    hoverEnlargeRatio: {default: 4},
     rightMargin: { default: 100 },
     topMargin: {default: 26 },
     bottomMargin: {default: 30 },
@@ -1001,7 +1001,7 @@ export default Kapsule({
 
           MoveToFront()(this);
 
-          const hoverEnlarge = state.lineHeight*state.hoverEnlargeRatio;
+          const hoverEnlarge = state.lineHeight*(state.hoverEnlargeRatio/10);
 
           d3Select(this)
             .transition().duration(70)
