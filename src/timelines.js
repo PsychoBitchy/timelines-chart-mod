@@ -97,12 +97,14 @@ export default Kapsule({
     maxHeight: { default: 640 },
     maxLineHeight: { default: 12 },
     leftMargin: { default: 90 },
+    rectRvalue: { default: 1},
     rightMargin: { default: 100 },
     topMargin: {default: 26 },
     bottomMargin: {default: 30 },
     useUtc: { default: false },
     xTickFormat: {},
     dateMarker: {},
+
     timeFormat: { default: '%Y-%m-%d %-I:%M:%S %p', triggerUpdate: false },
     zoomX: {  // Which time-range to show (null = min/max)
       default: [null, null],
@@ -973,8 +975,8 @@ export default Kapsule({
 
       const newSegments = timelines.enter().append('rect')
         .attr('class', 'series-segment')
-        .attr('rx', 1)
-        .attr('ry', 1)
+        .attr('rx', state.rectRvalue)
+        .attr('ry', state.rectRvalue)
         .attr('x', state.graphW/2)
         .attr('y', state.graphH/2)
         .attr('width', 0)
