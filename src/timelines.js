@@ -575,7 +575,7 @@ export default Kapsule({
 
       state.resetBtn = state.svg.append('text')
         .attr('class', 'reset-zoom-btn')
-        .text('Reset Zoom')
+        .text('⟲')
         .style('text-anchor', 'end')
         .on('mouseup' , function() {
           state.svg.dispatch('resetZoom');
@@ -928,6 +928,8 @@ export default Kapsule({
         .attr('class', 'series-group')
         .attr('x', 0)
         .attr('y', 0)
+        .attr('rx', state.rectRvalue)
+        .attr('ry', state.rectRvalue)
         .attr('height', 0)
         .style('fill', 'url(#' + state.groupGradId + ')')
         .on('mouseover', state.groupTooltip.show)
