@@ -98,7 +98,6 @@ export default Kapsule({
     maxLineHeight: { default: 12 },
     leftMargin: { default: 90 },
     rectRvalue: { default: 1},
-    hoverEnlargeRatio: {default: .4},
     rightMargin: { default: 100 },
     topMargin: {default: 26 },
     bottomMargin: {default: 30 },
@@ -956,7 +955,7 @@ export default Kapsule({
 
       if (maxElems<0) maxElems=null;
 
-      //const hoverEnlargeRatio = .4;
+      const hoverEnlargeRatio = .2;
 
       const dataFilter = (d, i) =>
         (maxElems==null || i<maxElems) &&
