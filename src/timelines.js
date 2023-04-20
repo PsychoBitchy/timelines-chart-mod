@@ -1,4 +1,4 @@
-import './timelines.css';
+import './timelines.scss';
 
 import Kapsule from 'kapsule';
 
