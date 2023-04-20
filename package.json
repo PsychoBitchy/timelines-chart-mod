@@ -50,6 +50,7 @@
     "d3-time-format": "1 - 4",
     "d3-tip": "^0.9",
     "kapsule": "^1.14",
+    "sass": "^1.62.0",
     "svg-text-fit": "^1.2",
     "svg-utils": "^1.3"
   },
