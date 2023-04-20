@@ -15,7 +15,9 @@ export default Kapsule({
     scale: {},
     domainRange: {},
     currentSelection: {},
+    rectRvalue: { default: 1},
     tickFormat: {},
+
     onChange: { default: (selectionStart, selectionEnd) => {}}
   },
   init(el, state) {
@@ -70,6 +72,9 @@ export default Kapsule({
       .attr('width', brushWidth)
       .attr('height', brushHeight);
 
+    state.svg.select('. selection')
+      .attr('rx', rectRvalue)
+      .attr('ry', rectRvalue);
     state.svg.select('.x.grid')
       .attr('transform', 'translate(0,' + brushHeight + ')')
       .call(state.xGrid);
