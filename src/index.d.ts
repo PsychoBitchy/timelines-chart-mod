@@ -134,6 +134,7 @@ export interface TimelinesChartGenericInstance<ChainableInstance> {
 
   // Append rx/ry params
   rectRvalue(): number;
+  rectRvalue(rx: number): ChainableInstance;
 }
 
 export type TimelinesChartInstance = TimelinesChartGenericInstance<TimelinesChartInstance>;
