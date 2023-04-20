@@ -34,16 +34,22 @@ export interface TimelinesChartGenericInstance<ChainableInstance> {
 
   width(): number;
   width(width: number): ChainableInstance;
+
   maxHeight(): number;
   maxHeight(height: number): ChainableInstance;
+
   maxLineHeight(): number;
   maxLineHeight(height: number): ChainableInstance;
+
   leftMargin(): number;
   leftMargin(margin: number): ChainableInstance;
+
   rightMargin(): number;
   rightMargin(margin: number): ChainableInstance;
+
   topMargin(): number;
   topMargin(margin: number): ChainableInstance;
+
   bottomMargin(): number;
   bottomMargin(margin: number): ChainableInstance;
 
@@ -52,12 +58,16 @@ export interface TimelinesChartGenericInstance<ChainableInstance> {
 
   useUtc(): boolean;
   useUtc(utc: boolean): ChainableInstance;
+
   timeFormat(): string;
   timeFormat(format: string): ChainableInstance;
+
   xTickFormat(): Formatter<Date> | null;
   xTickFormat(formatter: Formatter<Date> | null): ChainableInstance;
+
   dateMarker(): TS | null | boolean;
   dateMarker(date: TS | null | boolean): ChainableInstance;
+
   minSegmentDuration(): number;
   minSegmentDuration(duration: number): ChainableInstance;
 
@@ -66,26 +76,36 @@ export interface TimelinesChartGenericInstance<ChainableInstance> {
 
   zQualitative(): boolean;
   zQualitative(isQualitative: boolean): ChainableInstance;
+
   zColorScale(): Scale<Val, string>;
   zColorScale(scale: Scale<Val, string>): ChainableInstance;
+
   zDataLabel(): string;
   zDataLabel(text: string): ChainableInstance;
+
   zScaleLabel(): string;
   zScaleLabel(text: string): ChainableInstance;
 
   sort(labelcmpFn: CompareFn<string>, grpcmpFn: CompareFn<string>): ChainableInstance;
+
   sortAlpha(ascending: boolean): ChainableInstance;
+
   sortChrono(ascending: boolean): ChainableInstance;
+
   zoomX(): Range<TS | null> | null;
   zoomX(xRange: Range<TS | null> | null): ChainableInstance;
+
   zoomY(): Range<number | null> | null;
   zoomY(yRange: Range<number | null> | null): ChainableInstance;
+
   zoomYLabels(): Range<GroupLabel | null> | null;
   zoomYLabels(yLabelRange: Range<GroupLabel | null> | null): ChainableInstance;
+
   onZoom(cb: (zoomX: Range<TS | null> | null, zoomY: Range<number | null> | null) => void): ChainableInstance;
 
   enableOverview(): boolean;
   enableOverview(enable: boolean): ChainableInstance;
+  
   overviewDomain(): Range<TS | null>;
   overviewDomain(xRange: Range<TS | null>): ChainableInstance;
 
