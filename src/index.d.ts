@@ -135,7 +135,6 @@ export interface TimelinesChartGenericInstance<ChainableInstance> {
   // Append rx/ry params
   rectRvalue(): number;
   rectRvalue(rx: number): ChainableInstance;
-  
   hoverEnlargeRatio(): number;
   hoverEnlargeRatio(zoom: number): ChainableInstance;
 }
