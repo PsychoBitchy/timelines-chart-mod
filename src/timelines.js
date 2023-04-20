@@ -1001,7 +1001,7 @@ export default Kapsule({
 
           MoveToFront()(this);
 
-          const hoverEnlarge = state.lineHeight*hoverEnlargeRatio;
+          const hoverEnlarge = state.lineHeight*state.hoverEnlargeRatio;
 
           d3Select(this)
             .transition().duration(70)
