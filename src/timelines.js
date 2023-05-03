@@ -985,7 +985,6 @@ export default Kapsule({
         .attr('width', 0)
         .attr('height', 0)
         .style('fill', d => state.zColorScale(d.val))
-        .style('stroke', d => state.zColorScale(d.val))
         .style('fill-opacity', 0)
         .on('mouseover.groupTooltip', state.groupTooltip.show)
         .on('mouseout.groupTooltip', state.groupTooltip.hide)
