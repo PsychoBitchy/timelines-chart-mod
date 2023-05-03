@@ -796,10 +796,13 @@ export default Kapsule({
         .width(Math.max(120, state.graphW/3 * (state.zQualitative?2:1)))
         .height(state.topMargin*.6)
         .scale(state.zColorScale)
-        .label(state.zScaleLabel);
+        .label(state.zScaleLabel)
+        .attr('rx', state.rectRvalue)
+        .attr('ry', state.rectRvalue);
 
       state.resetBtn
-        .transition().duration(state.transDuration)
+        .transition()
+        .duration(state.transDuration)
           .attr('x', state.leftMargin + state.graphW*.99)
           .attr('y', state.topMargin *.8);
 
